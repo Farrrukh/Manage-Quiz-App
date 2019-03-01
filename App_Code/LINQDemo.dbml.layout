@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LINQDemo">
+  <DataContextMoniker Name="/LINQDemoDataContext" />
+  <nestedChildShapes>
+    <classShape Id="882e5447-ee0d-4a51-8cc9-1294660a9249" absoluteBounds="3.875, 1.375, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/LINQDemoDataContext/Course" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0873e39c-c883-4b67-bd46-ad1f4f66d8cf" absoluteBounds="3.89, 1.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="db59e5fa-577c-405a-abc4-6f5114f70950" absoluteBounds="1.25, 1, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/LINQDemoDataContext/Quiz" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b859c37d-e8f0-4fce-8483-db37943fb314" absoluteBounds="1.2650000000000001, 1.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.875 : 1.97199625651042); (3.25 : 1.97199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LINQDemoDataContext/Course/Course_Quiz" />
+      <nodes>
+        <classShapeMoniker Id="882e5447-ee0d-4a51-8cc9-1294660a9249" />
+        <classShapeMoniker Id="db59e5fa-577c-405a-abc4-6f5114f70950" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

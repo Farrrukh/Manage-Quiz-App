@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MyData" Class="LINQDemoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\MyData.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="MyDataConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Course" Member="Courses">
+    <Type Name="Course">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Course_Quiz" Member="Quizs" ThisKey="Id" OtherKey="CourseId" Type="Quiz" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Quiz" Member="Quizs">
+    <Type Name="Quiz">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="QuestionDescription" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="Choice1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Choice2" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Choice3" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Choice4" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CourseId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CorrectChoice" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="Course_Quiz" Member="Course" ThisKey="CourseId" OtherKey="Id" Type="Course" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
